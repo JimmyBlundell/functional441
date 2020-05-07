@@ -9,7 +9,7 @@ text = open("WarAndPeace.txt")
 
 text = str(list(text))
 
-num_chars = len(text)
+num_chars = len(text) # Used for calculating probability
 
 char_freq = {}
 
@@ -20,14 +20,13 @@ def getcharfreq(char_freq, ch):
 # Get the frequencies of each character in the text
 functools.reduce(getcharfreq, text, char_freq)
 
-#total_chars = len(char_freq) # Use this in lambda equation to get probability of characters: #occurences/#characters
-
-items = list(char_freq.items()) # Turn into list to iterate through in map() function - Don't know if I need?
-
+# Using map() to apply entropy equation on each frequency in char_freq, outputting list
 test = list(map(equation, char_freq.values()))
 
+# Sum together values in list for total info
 single_char_info = sum(test)
 
-print(single_char_info
-      )
+print(single_char_info)
+
+
 # TODO: Repeat for pairs and triples, then figure out concurrency.
