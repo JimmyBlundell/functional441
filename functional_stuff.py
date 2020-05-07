@@ -1,4 +1,3 @@
-import math
 from single_split import get_single_char_info
 from double_split import get_double_char_info
 from triple_split import get_triple_char_info
