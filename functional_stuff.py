@@ -13,4 +13,4 @@ get_double_char_info(text)
 
 get_triple_char_info(text)
 
-# TODO: Repeat for pairs and triples, then figure out concurrency.
+# TODO: Concurrency

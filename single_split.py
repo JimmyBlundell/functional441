@@ -17,9 +17,9 @@ def get_single_char_info(text):
     functools.reduce(getcharfreq, text, char_freq)
 
     # Using map() to apply entropy equation on each frequency in char_freq, outputting list
-    test = list(map(single_split_equation, char_freq.values()))
+    lst = list(map(single_split_equation, char_freq.values()))
 
     # Sum together values in list for total info
-    single_char_info = sum(test)
+    single_char_info = sum(lst)
 
     print("Single character split: " + str(single_char_info))
