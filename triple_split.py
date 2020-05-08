@@ -1,5 +1,10 @@
 import functools
 import math
+import logging
+import threading
+import os
+from queue import Queue
+from threading import Thread
 
 def get_triple_char_info(text):
 
@@ -25,6 +30,6 @@ def get_triple_char_info(text):
     # Sum together values in list for total info
     triple_char_info = sum(lst)
 
-    print("Triple character split: " + str(triple_char_info))
-
+    ans = str("Triple character split: " + str(triple_char_info))
+    return ans
 

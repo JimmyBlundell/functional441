@@ -1,5 +1,10 @@
 import functools
 import math
+import logging
+import threading
+import os
+from queue import Queue
+from threading import Thread
 
 def get_single_char_info(text):
 
@@ -22,4 +27,5 @@ def get_single_char_info(text):
     # Sum together values in list for total info
     single_char_info = sum(lst)
 
-    print("Single character split: " + str(single_char_info))
+    ans = str("Single character split: " + str(single_char_info))
+    return ans
