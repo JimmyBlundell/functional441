@@ -41,18 +41,15 @@ if __name__ == '__main__':
     stop = timeit.default_timer()
     print('Time: ', stop - start)
 
-    #ans1 = list(map(single_entropy, lst1))
-    #ans2 = list(map(double_entropy, lst2))
-    #ans3 = list(map(triple_entropy, lst3))
-
-
-
-
     with Pool(processes=64) as pool:
         start = timeit.default_timer()
         ans1 = list((pool.map(single_entropy, lst1)))
         ans2 = list((pool.map(double_entropy, lst2)))
         ans3 = list((pool.map(triple_entropy, lst3)))
+
+    stop = timeit.default_timer()
+
+    print('Time: ', stop - start)
 
     print(sum(ans1))
     print(sum(ans2))
@@ -62,6 +59,6 @@ if __name__ == '__main__':
     #TODO: Instead, use the entropy equation as a parameter in the map() function that I parellelize using pool.map. Return list from functions.
     #TODO: AKA run the 3 functions before, then create worker pool, then pool.map(list, entropy_equation).
 
-    stop = timeit.default_timer()
+    #stop = timeit.default_timer()
 
-    print('Time: ', stop - start)
+    #print('Time: ', stop - start)
