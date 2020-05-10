@@ -10,8 +10,6 @@ def get_triple_char_info(text):
 
     num_triple_chars = len(text)/3
 
-    #triple_split_equation = lambda x: (x) * (-1) * (x / num_triple_chars) * (math.log2(x / num_triple_chars))
-
     # Split up text into groups of triples
     triples = list((map(''.join, zip(*[iter(text)] * 3))))
 
@@ -26,13 +24,3 @@ def get_triple_char_info(text):
 
     lst = list(char_freq.values())
     return lst
-
-    # Using map() to apply entropy equation on each frequency in char_freq, outputting list
-    #lst = list(map(triple_split_equation, char_freq.values()))
-
-    # Sum together values in list for total info
-    #triple_char_info = sum(lst)
-
-    #ans = str("Triple character split: " + str(triple_char_info))
-    #return ans
-
