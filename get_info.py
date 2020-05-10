@@ -39,7 +39,6 @@ def get_char_info():
     functools.reduce(getcharfreq, doubles, double_char_freq)
     functools.reduce(getcharfreq, triples, triple_char_freq)
 
-    #TODO: map() function is not working right now - need to find out why
     # Using map() to apply entropy equation on each frequency in char_freq, outputting list
     lst_single = list(map(single_split_equation, single_char_freq.values()))
     lst_double = list(map(double_split_equation, double_char_freq.values()))
