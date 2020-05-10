@@ -1,6 +1,7 @@
 import functools
 import math
 
+#NOTE: This file is not currently being used, but rather is used as a reference for making my other functions.
 def get_char_info():
 
     ans = []
